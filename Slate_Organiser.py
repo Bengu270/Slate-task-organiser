@@ -88,7 +88,7 @@ def createTodoCheckBox(event=None, input=None, destroy = True):
             todoCheckBox.destroy()
             remove = memoryList.index(todoCheckBox.cget("text"))
 
-            if " -r:" not in remove: # Will not remove if its a repeatable to-dos
+            if " -r:" not in memoryList[remove]: # Will not remove if its a repeatable to-dos
                 memoryList.pop(remove)
 
                 memoryFile = open(memory, "w")
@@ -301,4 +301,5 @@ for listItem in memoryList:
 newDay = False
 
 # Run
+
 root.mainloop()
